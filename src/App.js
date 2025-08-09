@@ -1,6 +1,6 @@
 // App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoginPage from "./components/Login";
 import HomePage from "./components/Home";
 import Dashboard from "./components/Dashboard";
@@ -22,8 +22,8 @@ import Signup from "./components/Signup";
 
 function App() {
   return (
-    <Router>
-      <Routes>
+    
+    <Routes>
         {/* Login Page as default */}
         <Route path="/login" element={<LoginPage />} />
 
@@ -74,7 +74,7 @@ function App() {
         {/* Book a Demo */}
         <Route path="/bookademo" element={<Demo />} />
       </Routes>
-    </Router>
+    
   );
 }
 
