@@ -1,11 +1,11 @@
 // App.js
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./components/Login";
 import HomePage from "./components/Home";
-import Dashboard from "./components/Dashboard"; // Import your Dashboard component
+import Dashboard from "./components/Dashboard";
 import Inventory from "./components/Inventory";
-import SupplyChain from "./components/SupplyChain"
+import SupplyChain from "./components/SupplyChain";
 import Analytics from "./components/Analytics";
 import Alerts from "./components/Alerts";
 import Settings from "./components/Settings";
@@ -17,16 +17,17 @@ import ExportReport from "./components/ExportReport";
 import RunForecast from "./components/RunForcast";
 import Demo from "./components/Demo";
 import About from "./components/About";
-import Features from "./components/Features"
-import Signup from "./components/Signup"
+import Features from "./components/Features";
+import Signup from "./components/Signup";
 
 function App() {
   return (
     <Router>
+      <Routes>
         {/* Login Page as default */}
         <Route path="/login" element={<LoginPage />} />
 
-        {/* Placeholder routes for future pages */}
+        {/* Placeholder routes */}
         <Route path="/features" element={<Features />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<Signup />} />
@@ -34,44 +35,45 @@ function App() {
         {/* Home page */}
         <Route path="/home" element={<HomePage />} />
 
-        {/* Dashboard page */}
+        {/* Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
 
-        {/* Inventory Page*/}
+        {/* Inventory */}
         <Route path="/inventory" element={<Inventory />} />
 
-        {/* SupplyChain Page*/}
-        <Route path="/supplychain" element={<SupplyChain />} />  
+        {/* Supply Chain */}
+        <Route path="/supplychain" element={<SupplyChain />} />
 
-        {/* SupplyChain Page*/}
-        <Route path="/Analytics" element={<Analytics />} />     
+        {/* Analytics */}
+        <Route path="/analytics" element={<Analytics />} />
 
-         {/* Alerts Page*/}
-        <Route path="/Alerts" element={<Alerts />} />  
+        {/* Alerts */}
+        <Route path="/alerts" element={<Alerts />} />
 
-        {/* Settings Page*/}
-        <Route path="/Settings" element={<Settings />} /> 
+        {/* Settings */}
+        <Route path="/settings" element={<Settings />} />
 
-        {/* Profile Page*/}
-        <Route path="/Profile" element={<Profile />} />
+        {/* Profile */}
+        <Route path="/profile" element={<Profile />} />
 
-        {/* Profile Page*/}
-        <Route path="/Addproducts" element={<AddProduct />} />
+        {/* Add Products */}
+        <Route path="/addproducts" element={<AddProduct />} />
 
-        {/* Create Page*/}
+        {/* Create Shipment */}
         <Route path="/createshipment" element={<CreateShipment />} />
 
-        {/* UpdateInventory Page*/}
+        {/* Update Inventory */}
         <Route path="/updateinventory" element={<UpdateInventory />} />
 
-        {/* UpdateInventory Page*/}
+        {/* Export Report */}
         <Route path="/exportreport" element={<ExportReport />} />
 
-        {/* UpdateInventory Page*/}
+        {/* Run Forecast */}
         <Route path="/runforecast" element={<RunForecast />} />
 
-        {/* bookademo Page*/}
+        {/* Book a Demo */}
         <Route path="/bookademo" element={<Demo />} />
+      </Routes>
     </Router>
   );
 }
