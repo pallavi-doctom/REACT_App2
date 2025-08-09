@@ -23,7 +23,6 @@ import Signup from "./components/Signup"
 function App() {
   return (
     <Router>
-      <Routes>
         {/* Login Page as default */}
         <Route path="/login" element={<LoginPage />} />
 
@@ -73,7 +72,6 @@ function App() {
 
         {/* bookademo Page*/}
         <Route path="/bookademo" element={<Demo />} />
-      </Routes>
     </Router>
   );
 }
